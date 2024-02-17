@@ -18,6 +18,7 @@ namespace TodoWebService.Auth
         {
             var claims = new[]
             {
+                new Claim(ClaimTypes.Name,email),
                 new Claim(ClaimsIdentity.DefaultNameClaimType, email),
                 new Claim("userId", id),
                 new Claim(ClaimsIdentity.DefaultRoleClaimType, string.Join(",", roles))

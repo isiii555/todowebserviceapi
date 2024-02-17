@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TodoWebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e7914f9779642da704af6613cec363027a9da45")]
 [assembly: System.Reflection.AssemblyProductAttribute("TodoWebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TodoWebService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

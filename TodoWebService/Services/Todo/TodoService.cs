@@ -11,55 +11,46 @@ namespace TodoWebService.Services.Todo
     public class TodoService : ITodoService
     {
         private readonly TodoDbContext _context;
-
-        public TodoService(TodoDbContext context)
+        private readonly ILogger<TodoService> _logger;
+        public TodoService(TodoDbContext context,ILogger<TodoService> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        public async Task<TodoItemDto?> ChangeTodoItemStatus(int id, bool isCompleted,string userId)
+        public async Task<TodoItemDto?> ChangeTodoItemStatus(int id, bool isCompleted, string userId)
         {
-            try
+            var todo = await _context.TodoItems.FirstOrDefaultAsync(x => x.Id == id);
+            var oldStatus = todo.IsCompleted;
+            if (todo!.UserId == userId)
             {
-                var todo = await _context.TodoItems.FirstOrDefaultAsync(x => x.Id == id);
-                if (todo!.UserId == userId)
-                {  
-                    todo!.IsCompleted = isCompleted;
-                    _context.TodoItems.Update(todo);
-                    await _context.SaveChangesAsync();
-                    var todoDto = todo.Adapt<TodoItemDto>();
-                    return todoDto;
-                }
-                return null;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        public async Task<TodoItemDto?> CreateTodo(CreateTodoItemRequest request,string userId)
-        {
-            try
-            {
-                var newTodoItem = request.Adapt<TodoItem>();
-                newTodoItem.UserId = userId;
-                var entity = _context.TodoItems.Add(newTodoItem).Entity;
+                todo!.IsCompleted = isCompleted;
+                _context.TodoItems.Update(todo);
                 await _context.SaveChangesAsync();
-                var newTodoItemDto = new TodoItemDto(entity.Id, entity.Text, entity.IsCompleted, entity.CreatedTime);
-                return newTodoItemDto;
+                var todoDto = todo.Adapt<TodoItemDto>();
+                _logger.LogInformation($"Id : {todoDto.Id} todo item status changed {oldStatus} -> {todoDto.IsCompleted}!");
+                return todoDto;
             }
-            catch(Exception)
-            {
-                return null;
-            }
+            return null;
+        }
+
+        public async Task<TodoItemDto?> CreateTodo(CreateTodoItemRequest request, string userId)
+        {
+
+            var newTodoItem = request.Adapt<TodoItem>();
+            newTodoItem.UserId = userId;
+            var entity = _context.TodoItems.Add(newTodoItem).Entity;
+            await _context.SaveChangesAsync();
+            var newTodoItemDto = new TodoItemDto(entity.Id, entity.Text, entity.IsCompleted, entity.CreatedTime);
+            _logger.LogInformation($"Id : {newTodoItemDto.Id} todo item created!");
+            return newTodoItemDto;
         }
 
         public Task<bool> DeleteTodo(int id)
         {
             throw new NotImplementedException();
         }
-        public async Task<PaginatedListDto<TodoItemDto>> GetAllByUserId(int page, int pageSize, bool? isCompleted,string userId)
+        public async Task<PaginatedListDto<TodoItemDto>> GetAllByUserId(int page, int pageSize, bool? isCompleted, string userId)
         {
             IQueryable<TodoItem> query = _context.TodoItems.Where(td => td.UserId == userId).AsQueryable();
 
@@ -80,7 +71,7 @@ namespace TodoWebService.Services.Todo
                 );
         }
 
-        public async Task<PaginatedListDto<TodoItemDto>> GetAll(int page, int pageSize, bool? isCompleted) 
+        public async Task<PaginatedListDto<TodoItemDto>> GetAll(int page, int pageSize, bool? isCompleted)
         {
             IQueryable<TodoItem> query = _context.TodoItems.AsQueryable();
 

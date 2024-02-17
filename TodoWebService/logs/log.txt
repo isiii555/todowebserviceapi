@@ -1,0 +1,369 @@
+2024-02-17 14:44:11.310 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 14:44:11.492 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 14:44:11.498 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 14:44:11.502 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 14:44:11.507 +04:00 [INF] Hosting environment: Development
+2024-02-17 14:44:11.512 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 14:44:12.165 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 14:44:12.581 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 14:44:12.581 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 14:44:12.585 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 425.2533ms
+2024-02-17 14:44:12.605 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 23.897ms
+2024-02-17 14:44:12.656 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.6099ms
+2024-02-17 14:44:12.782 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 14:44:12.972 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.9433ms
+2024-02-17 14:44:18.501 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 14:44:18.658 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 156.5783ms
+2024-02-17 14:44:18.675 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 14:44:18.703 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 14:44:18.762 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 14:44:19.096 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 316.9755ms
+2024-02-17 14:44:19.101 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 14:44:19.113 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: test Exception
+   at TodoWebService.Controllers.TodoController.CreateTodo(CreateTodoItemRequest request) in C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService\Controllers\TodoController.cs:line 45
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-02-17 14:44:19.201 +04:00 [ERR] test Exception
+2024-02-17 14:44:19.226 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 500 null application/json 550.5035ms
+2024-02-17 14:50:55.301 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 14:50:55.482 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 14:50:55.485 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 14:50:55.488 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 14:50:55.490 +04:00 [INF] Hosting environment: Development
+2024-02-17 14:50:55.494 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 14:50:55.911 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 14:50:56.254 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 346.6702ms
+2024-02-17 14:50:56.270 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 14:50:56.271 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 14:50:56.302 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 30.9636ms
+2024-02-17 14:50:56.354 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.1329ms
+2024-02-17 14:50:56.630 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 14:50:56.856 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 225.7524ms
+2024-02-17 15:02:48.800 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:02:48.985 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:02:48.988 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:02:48.992 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:02:48.993 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:02:48.995 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:02:49.678 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:02:49.975 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 295.2407ms
+2024-02-17 15:02:49.993 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:02:49.993 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:02:50.042 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 49.5589ms
+2024-02-17 15:02:50.107 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 114.5933ms
+2024-02-17 15:02:50.337 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:02:50.527 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.2475ms
+2024-02-17 15:03:09.870 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7089/api/Auth/register - application/json 50
+2024-02-17 15:03:09.961 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.AuthController.Register (TodoWebService)'
+2024-02-17 15:03:10.025 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Auth.AuthTokenDto]] Register(TodoWebService.Models.DTOs.Auth.RegisterRequest) on controller TodoWebService.Controllers.AuthController (TodoWebService).
+2024-02-17 15:03:12.953 +04:00 [INF] Executed DbCommand (63ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-02-17 15:03:13.050 +04:00 [INF] Executing ConflictObjectResult, writing value of type 'System.String'.
+2024-02-17 15:03:13.065 +04:00 [INF] Executed action TodoWebService.Controllers.AuthController.Register (TodoWebService) in 3027.0671ms
+2024-02-17 15:03:13.078 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.AuthController.Register (TodoWebService)'
+2024-02-17 15:03:13.113 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7089/api/Auth/register - 409 null text/plain; charset=utf-8 3243.6242ms
+2024-02-17 15:03:20.448 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7089/api/Auth/register - application/json 51
+2024-02-17 15:03:20.464 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.AuthController.Register (TodoWebService)'
+2024-02-17 15:03:20.467 +04:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Auth.AuthTokenDto]] Register(TodoWebService.Models.DTOs.Auth.RegisterRequest) on controller TodoWebService.Controllers.AuthController (TodoWebService).
+2024-02-17 15:03:20.668 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-02-17 15:03:21.060 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-02-17 15:03:21.684 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-02-17 15:03:21.859 +04:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-02-17 15:03:21.914 +04:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-02-17 15:03:21.983 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-02-17 15:03:22.043 +04:00 [INF] Executed DbCommand (18ms) [Parameters=[@p15='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+2024-02-17 15:03:22.065 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Auth.AuthTokenDto'.
+2024-02-17 15:03:22.078 +04:00 [INF] Executed action TodoWebService.Controllers.AuthController.Register (TodoWebService) in 1601.5063ms
+2024-02-17 15:03:22.082 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.AuthController.Register (TodoWebService)'
+2024-02-17 15:03:22.086 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7089/api/Auth/register - 200 null application/json; charset=utf-8 1638.676ms
+2024-02-17 15:03:46.057 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:03:46.069 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 11.4067ms
+2024-02-17 15:03:46.086 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:03:46.239 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:46.262 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:03:46.668 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:03:46.731 +04:00 [INF] Id : 5 todo item created!
+2024-02-17 15:03:46.735 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:03:46.775 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 500.0044ms
+2024-02-17 15:03:46.779 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:46.784 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 696.9779ms
+2024-02-17 15:03:49.281 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:03:49.292 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 10.7571ms
+2024-02-17 15:03:49.296 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:03:49.316 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:49.320 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:03:49.361 +04:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:03:49.371 +04:00 [INF] Id : 6 todo item created!
+2024-02-17 15:03:49.376 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:03:49.381 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 52.2254ms
+2024-02-17 15:03:49.385 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:49.393 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 96.6481ms
+2024-02-17 15:03:50.656 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:03:50.663 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 7.5779ms
+2024-02-17 15:03:50.667 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:03:50.678 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:50.681 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:03:50.715 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:03:50.724 +04:00 [INF] Id : 7 todo item created!
+2024-02-17 15:03:50.727 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:03:50.732 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 44.1438ms
+2024-02-17 15:03:50.733 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:03:50.735 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 68.1719ms
+2024-02-17 15:05:22.261 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:05:22.440 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:05:22.443 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:05:22.445 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:05:22.447 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:05:22.450 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:05:22.922 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:05:23.243 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 323.1545ms
+2024-02-17 15:05:23.538 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:05:23.538 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:05:23.550 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 11.4144ms
+2024-02-17 15:05:23.593 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.3011ms
+2024-02-17 15:05:23.757 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:05:23.928 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.6137ms
+2024-02-17 15:07:57.885 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:07:58.055 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:07:58.060 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:07:58.064 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:07:58.071 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:07:58.072 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:07:58.698 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:07:58.922 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 224.8195ms
+2024-02-17 15:07:58.961 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:07:58.961 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:07:58.975 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 11.8151ms
+2024-02-17 15:07:59.023 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.8978ms
+2024-02-17 15:07:59.602 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:07:59.848 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 245.2869ms
+2024-02-17 15:08:18.437 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Auth/login - application/json 59
+2024-02-17 15:08:18.460 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Auth/login - 307 0 null 23.0491ms
+2024-02-17 15:08:18.474 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Auth/login - application/json 59
+2024-02-17 15:08:18.562 +04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '2/17/2024 10:42:49 AM', Current time (UTC): '2/17/2024 11:08:18 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-02-17 15:08:18.584 +04:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '2/17/2024 10:42:49 AM', Current time (UTC): '2/17/2024 11:08:18 AM'.
+2024-02-17 15:08:18.595 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.AuthController.Login (TodoWebService)'
+2024-02-17 15:08:18.637 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Auth.AuthTokenDto]] Login(TodoWebService.Models.DTOs.Auth.LoginRequest) on controller TodoWebService.Controllers.AuthController (TodoWebService).
+2024-02-17 15:08:19.996 +04:00 [INF] Executed DbCommand (26ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-02-17 15:08:20.214 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2024-02-17 15:08:20.242 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2024-02-17 15:08:20.276 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-02-17 15:08:20.469 +04:00 [INF] Executed DbCommand (6ms) [Parameters=[@p15='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14
+OUTPUT 1
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+2024-02-17 15:08:20.489 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Auth.AuthTokenDto'.
+2024-02-17 15:08:20.504 +04:00 [INF] Executed action TodoWebService.Controllers.AuthController.Login (TodoWebService) in 1852.9789ms
+2024-02-17 15:08:20.511 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.AuthController.Login (TodoWebService)'
+2024-02-17 15:08:20.528 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Auth/login - 200 null application/json; charset=utf-8 2054.0223ms
+2024-02-17 15:08:41.207 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:08:41.224 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 17.3652ms
+2024-02-17 15:08:41.228 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:08:41.292 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:08:41.311 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:08:41.581 +04:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:08:41.615 +04:00 [INF] Id : 8 todo item created!
+2024-02-17 15:08:41.620 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:08:41.639 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 313.9876ms
+2024-02-17 15:08:41.647 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:08:41.653 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 425.3667ms
+2024-02-17 15:09:43.414 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:09:43.628 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:09:43.667 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:09:43.672 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:09:43.673 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:09:43.674 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:09:44.121 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:09:44.440 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 318.5106ms
+2024-02-17 15:09:44.509 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:09:44.509 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:09:44.525 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 15.1384ms
+2024-02-17 15:09:44.568 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.3857ms
+2024-02-17 15:09:45.032 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:09:45.243 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 210.8519ms
+2024-02-17 15:09:56.483 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:09:56.508 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 24.9021ms
+2024-02-17 15:09:56.525 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:09:56.754 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:09:56.823 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:10:00.046 +04:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:10:00.174 +04:00 [INF] Id : 9 todo item created!
+2024-02-17 15:10:00.193 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:10:00.243 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 3402.329ms
+2024-02-17 15:10:00.248 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:10:00.273 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 3747.7563ms
+2024-02-17 15:11:18.010 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:11:18.217 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:11:18.220 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:11:18.224 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:11:18.225 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:11:18.226 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:11:18.506 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:11:18.738 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 232.9861ms
+2024-02-17 15:11:18.758 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:11:18.758 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:11:18.771 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.3389ms
+2024-02-17 15:11:18.808 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.104ms
+2024-02-17 15:11:19.037 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:11:19.191 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 154.1776ms
+2024-02-17 15:11:22.595 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:11:22.625 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 30.4326ms
+2024-02-17 15:11:22.640 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:11:22.735 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:11:22.762 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:11:24.185 +04:00 [INF] Executed DbCommand (34ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:11:24.239 +04:00 [INF] Id : 10 todo item created!
+2024-02-17 15:11:24.250 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:11:24.273 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 1498.8718ms
+2024-02-17 15:11:24.279 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:11:24.291 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 1650.6034ms
+2024-02-17 15:11:49.015 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:11:49.027 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 11.8503ms
+2024-02-17 15:11:49.033 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26
+2024-02-17 15:11:49.062 +04:00 [INF] Executing endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:11:49.068 +04:00 [INF] Route matched with {action = "CreateTodo", controller = "Todo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TodoWebService.Models.DTOs.Todo.TodoItemDto]] CreateTodo(TodoWebService.Models.DTOs.Todo.CreateTodoItemRequest) on controller TodoWebService.Controllers.TodoController (TodoWebService).
+2024-02-17 15:11:49.340 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TodoItems] ([CreatedTime], [IsCompleted], [Text], [UpdatedTime], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-02-17 15:11:49.353 +04:00 [INF] Id : 11 todo item created!
+2024-02-17 15:11:49.358 +04:00 [INF] Executing ObjectResult, writing value of type 'TodoWebService.Models.DTOs.Todo.TodoItemDto'.
+2024-02-17 15:11:49.365 +04:00 [INF] Executed action TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService) in 287.8646ms
+2024-02-17 15:11:49.370 +04:00 [INF] Executed endpoint 'TodoWebService.Controllers.TodoController.CreateTodo (TodoWebService)'
+2024-02-17 15:11:49.377 +04:00 [INF] Request finished HTTP/1.1 POST https://localhost:7089/api/Todo/create - 200 null application/json; charset=utf-8 343.2989ms
+2024-02-17 15:12:09.163 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:12:09.388 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:12:09.393 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:12:09.399 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:12:09.404 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:12:09.408 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:12:09.956 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:12:10.224 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 269.0031ms
+2024-02-17 15:12:10.279 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:12:10.279 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:12:10.291 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 13.2217ms
+2024-02-17 15:12:10.326 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1695ms
+2024-02-17 15:12:10.653 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:12:10.823 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 169.7014ms
+2024-02-17 15:12:23.696 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:12:24.216 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:12:24.218 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:12:24.224 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:12:24.231 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:12:24.234 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:12:26.937 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:12:27.433 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 507.7505ms
+2024-02-17 15:12:27.459 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:12:27.468 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:12:27.503 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 54.1875ms
+2024-02-17 15:12:27.649 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.2112ms
+2024-02-17 15:12:27.739 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:12:28.053 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 313.9678ms
+2024-02-17 15:12:42.930 +04:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-17 15:12:43.565 +04:00 [INF] Now listening on: https://localhost:7089
+2024-02-17 15:12:43.567 +04:00 [INF] Now listening on: http://localhost:5097
+2024-02-17 15:12:43.571 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-17 15:12:43.573 +04:00 [INF] Hosting environment: Development
+2024-02-17 15:12:43.574 +04:00 [INF] Content root path: C:\Users\user\OneDrive\Masaüstü\todowebserviceapi\TodoWebService
+2024-02-17 15:12:45.008 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/index.html - null null
+2024-02-17 15:12:45.398 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/index.html - 200 null text/html;charset=utf-8 393.2163ms
+2024-02-17 15:12:45.407 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_vs/browserLink - null null
+2024-02-17 15:12:45.407 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - null null
+2024-02-17 15:12:45.432 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 25.4329ms
+2024-02-17 15:12:45.490 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.1564ms
+2024-02-17 15:12:45.600 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - null null
+2024-02-17 15:12:45.789 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7089/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.1583ms
+2024-02-17 15:12:48.255 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5097/api/Todo/create - application/json 26
+2024-02-17 15:12:48.315 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5097/api/Todo/create - 307 0 null 60.7422ms
+2024-02-17 15:12:48.333 +04:00 [INF] Request starting HTTP/1.1 POST https://localhost:7089/api/Todo/create - application/json 26

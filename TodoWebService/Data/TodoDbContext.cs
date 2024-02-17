@@ -9,5 +9,6 @@ namespace TodoWebService.Data
         public TodoDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+        public DbSet<Product> Products => Set<Product>();
     }
 }
