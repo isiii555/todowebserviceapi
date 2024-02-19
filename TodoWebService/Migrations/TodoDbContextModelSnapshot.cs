@@ -258,6 +258,12 @@ namespace TodoWebService.Migrations
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("DeadlineEmailSent")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("DeadlineTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 

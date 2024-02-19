@@ -39,7 +39,7 @@ Logger log = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .CreateLogger();
 
-builder.Host.UseSerilog(log);
+//builder.Host.UseSerilog(log);
 
 //builder.Services.AddRedis();
 
@@ -47,7 +47,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwagger();
 builder.Services.AddAuthenticationAndAuthorization(builder.Configuration);
-
+builder.Services.AddEmailService(builder.Configuration);
 builder.Services.AddDomainServices();
 
 builder.Services.AddTodoContext(builder.Configuration);
@@ -61,7 +61,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseSerilogRequestLogging();
+//app.UseSerilogRequestLogging();
 
 app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILogger<Program>>());
 
@@ -73,7 +73,6 @@ app.UseAuthorization();
 app.Use(async (context, next) =>
 {
     var username = context.User?.Identity?.IsAuthenticated is not null || true ? context.User.Identity.Name : null;
-    Console.WriteLine(username);
     LogContext.PushProperty("user_name", username?.ToString() ?? null);
     await next.Invoke();
 });

@@ -4,20 +4,25 @@ using Microsoft.EntityFrameworkCore;
 using TodoWebService.Data;
 using TodoWebService.Models.DTOs.Product;
 using TodoWebService.Models.Entities;
+using TodoWebService.Services.Email;
 
 namespace TodoWebService.Services.Product
 {
     public class ProductService : IProductService
     {
         private readonly TodoDbContext _todoDbContext;
+        private readonly IEmailService _emailService;
 
-        public ProductService(TodoDbContext todoDbContext)
+        public ProductService(TodoDbContext todoDbContext,IEmailService emailService)
         {
             _todoDbContext = Guard.Against.Null(todoDbContext);
+            _emailService = emailService;
         }
 
         public async Task<ProductDto> CreateProduct(CreateProductRequest request)
         {
+            await _emailService.SendEmailAsync(req);
+
             var product = request.Adapt<Models.Entities.Product>();
             var addedProduct = (await _todoDbContext.Products.AddAsync(product)).Entity;
             await _todoDbContext.SaveChangesAsync();

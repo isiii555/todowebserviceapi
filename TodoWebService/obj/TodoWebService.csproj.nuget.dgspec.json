@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Masaüstü\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj": {}
+    "C:\\Users\\salam_ar93\\Desktop\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Masaüstü\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj": {
+    "C:\\Users\\salam_ar93\\Desktop\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Masaüstü\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj",
+        "projectUniqueName": "C:\\Users\\salam_ar93\\Desktop\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj",
         "projectName": "TodoWebService",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Masaüstü\\todowebserviceapi\\TodoWebService\\obj\\",
+        "projectPath": "C:\\Users\\salam_ar93\\Desktop\\todowebserviceapi\\TodoWebService\\TodoWebService.csproj",
+        "packagesPath": "C:\\Users\\salam_ar93\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\salam_ar93\\Desktop\\todowebserviceapi\\TodoWebService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\salam_ar93\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +48,10 @@
               "target": "Package",
               "version": "[4.4.0, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.4.0, )"
@@ -57,6 +65,12 @@
               "version": "[8.0.1, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.1, )"
             },

@@ -12,6 +12,7 @@ using TodoWebService.Auth;
 using TodoWebService.Data;
 using TodoWebService.Models.Entities;
 using TodoWebService.Providers;
+using TodoWebService.Services.Email;
 using TodoWebService.Services.Product;
 using TodoWebService.Services.Todo;
 
@@ -81,6 +82,15 @@ namespace TodoWebService
             return services;
         }
 
+        public static IServiceCollection AddEmailService(this IServiceCollection services, IConfiguration configuration)
+        {
+            var emailConfig = new EmailConfig();
+            configuration.GetSection("EmailSettings").Bind(emailConfig);
+            services.AddSingleton(emailConfig);
+            services.AddScoped<IEmailService, EmailService>();
+            return services;
+        }
+
         public static IServiceCollection AddTodoContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<TodoDbContext>(op => op.UseSqlServer(configuration.GetConnectionString("TodoConStr")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
@@ -94,6 +104,13 @@ namespace TodoWebService
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IRequestUserProvider, RequestUserProvider>();
+            services.AddHostedService<TodoDeadlineService>();
+            return services;
+        }
+
+        public static IServiceCollection AddBackgroundService(this IServiceCollection services)
+        {
+            services.AddHostedService<TodoDeadlineService>();
             return services;
         }
 

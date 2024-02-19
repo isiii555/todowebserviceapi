@@ -4,6 +4,8 @@
     {
         public string Text { get; set; } = string.Empty;
         public bool IsCompleted { get; set; }
+        public bool DeadlineEmailSent { get; set; } = false;
+        public DateTime DeadlineTime { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime UpdatedTime { get; set; }
         public string UserId { get; set; }
