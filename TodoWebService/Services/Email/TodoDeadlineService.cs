@@ -16,13 +16,19 @@ namespace TodoWebService.Services.Email
         {
             _dbContext = dbContext;
             _emailService = emailService;
-            this.timer = timer;
+            timer = new Timer(3600000);
+            timer.Elapsed += TimerElapsed;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            SendEmails();
+            timer.Start();
             return Task.CompletedTask;
+        }
+
+        public void TimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            SendEmails();
         }
 
         public async void SendEmails() {
@@ -61,6 +67,8 @@ namespace TodoWebService.Services.Email
 
         public Task StopAsync(CancellationToken cancellationToken)
         {
+            timer.Stop();
+            timer.Dispose();
             return Task.CompletedTask;
         }
     }
